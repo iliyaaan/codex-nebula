@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.js"></script>
+    
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <ul>
+            <li><button onclick="goBack()">Back</button></li>
+            <li><img src="./imgs/logo.png" alt="no img found"></li>
+            <span>
+                <li>Tell Us How To Implement Your Idea!</li>
+            </span>
+        </ul>
+    </nav>
+    <!-- end of navbar -->
+    <!-- start of req -->
+  
+    <!-- end of req -->
+    <!-- start of img divs -->
+    <div class="container">
+        <div class="box" id="imageBox">
+            <h1>Images</h1>
+        </div>
+        <span>
+            <div class="box">
+                <input type="file" id="ibox" onchange="displayImages(this, 'imageBox')">
+            </div>
+        </span>
+    </div>
+    <!-- end of img divs -->
+    <!-- start of feature div -->
+    <div class="box" id="featureBox">
+        <h1>Features</h1>
+    </div>
+    <div id="mainContainer">
+        <div class="container template-container" id="featureContainer">
+            <div class="featurebox">
+                <h3>Features</h3>
+                <br>
+                <input type="text" placeholder="enter features">
+            </div>
+            <div class="featurebox">
+                <h3>Sub features</h3>
+                <br>
+                <input type="text" placeholder="enter sub features">
+            </div>
+            <div class="featurebox">
+                <h3>Refrence website</h3>
+                <br>
+                <input type="text" placeholder="link of refrence website">
+            </div>
+            <div class="featurebox">
+                <h3>Description</h3>
+                <br>
+                <input type="text" placeholder="enter description">
+            </div>
+            <div class="featurebox">
+                <h3>Refrence image</h3>
+                <input type="file" id="fbox" multiple onchange="displayImages(this, 'featureBox')">
+            </div>
+            <button class="cloneButton">Add more features</button>
+        </div>
+    </div>
+    <!-- end of feature div -->
+    <div class="container-wrapper">
+        <div class="container" id="req">
+            <U><h1>SERVICES</h1></U>
+            <label>
+                <input type="radio" id="mobileApp" name="developmentOption">
+                Mobile App Development
+            </label>
+    
+            <label>
+                <input type="radio" id="desktopApp" name="developmentOption">
+                Desktop Development
+            </label>
+    
+            <label>
+                <input type="radio" id="websiteDev" name="developmentOption">
+                CMS And Website Development
+            </label>
+    
+            <label>
+                <input type="radio" id="weTakeCare" name="developmentOption">
+                We Take Care Of It
+            </label>
+        </div>
+        <!-- start of thirdparty -->
+        <div class="container" id="tparty">
+            <div class="list"><h2>Do you want to integrate third party?</h2>
+                <button onclick="toggleInput(true)">YES</button>
+                <button id="nobtn"  onclick="toggleInput(false)">NO</button>
+                <input type="text" id="thirdPartyInput" placeholder="e.g paypal"></div>
+        </div>
+        <!-- endofthirdparty -->
+    </div>
+  
+  
+
+ <!-- start ofcolor pallet -->
+
+<div class="colorbox">
+    <h2>Select theme for your website:</h2>
+
+    <div class="color-palette-container">
+        <div class="color-palette" id="colorPalette">
+          <div class="color" style="background-color: #3498db;" data-color="#3498db" onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #2980b9;" data-color="#2980b9" onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #2c3e50;" data-color="#2c3e50" onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #1c2835;" data-color="#1c2835"onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #000000;" data-color="#000000"onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #42a590;" data-color="#42a590"onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #72a0a8;" data-color="#72a0a8"onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #402c50;" data-color="#402c50"onclick="selectColor(this)"></div>
+          <div class="color" style="background-color: #c287b3;" data-color="#c287b3"onclick="selectColor(this)"></div>
+        </div>
+    
+        <div id="selectedColorContainer">
+          <div id="selectedColor"></div>
+          <span id="colorName"></span>
+        </div>
+    </div>
+</div>
+ <!-- end of color pallet -->
+<!-- start of datepicker -->
+
+<div class="date">
+    <p>When do you want the project to start?</p>
+    <input type="text" id="startDatePicker" placeholder="Select the starting date">
+    <p>When do you want the project to end?</p>
+    <input type="text" id="endDatePicker" placeholder="Select the ending date">
+  </div>
+  <!-- end of date picker -->
+<!-- start of main button -->
+  <div class="mainbutton">
+    <button>SUBMIT FORM</button>
+  </div>
+
+
+
+
+
+
+   
+    <script src="./script2.js"></script>
+</body>
+
+</html>

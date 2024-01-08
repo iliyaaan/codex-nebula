@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', 'sans-serif';
+    background-color: rgb(3, 3, 3);
+}
+
+.container {
+    width: 80%;
+    background-color: #18141b;
+    display: flex;
+    align-items: center;
+    margin: 10vh auto 0 auto;
+}
+
+.box {
+    width: 50%;
+    background-color: #18141b;
+    transition: all 1s ease;
+}
+
+#form {
+    margin: 5%;
+}
+
+.image-container {
+    width: 50%;
+    /* Adjusted width for the image container */
+    display: flex;
+    justify-content: center;
+    /* Center the image horizontally */
+}
+
+.container img {
+    width: 80%;
+    height: auto;
+    margin: 5% 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 4s ease;
+}
+
+.container img.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-control input {
+    border: none;
+    border-bottom: 2px solid rgb(124, 40, 124);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    background-color: #3a3341;
+    color: #fff;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control label {
+    font-size: 20px;
+    margin: 2px;
+    color: #fff;
+}
+
+#form button,
+#form .reset {
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    border-radius: 8px;
+    border: none;
+    align-self: center;
+    background-color: #18141b;
+    color: #fff;
+}
+
+#form button {
+    background-color: #241a2b;
+}
+
+#form button:hover {
+    background-color: #48305a;
+}
+
+.input-control.success input {
+    border-color: green;
+}
+
+.input-control.error input {
+    border-color: red;
+}
+
+.input-control .error {
+    color: #b42542;
+    font-size: 12px;
+    height: 16px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+    .container img {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box,
+    .image-container {
+        width: 100%;
+    }
+
+    .container img {
+        width: 100%;
+    }
+
+    .input-control label {
+        font-size: 18px;
+    }
+
+    #form button,
+    #form .reset {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container img {
+        width: 80%;
+    }
+
+    .input-control label {
+        font-size: 16px;
+    }
+}
